@@ -34,22 +34,23 @@
 
         function setUserName() {
             const myName = prompt("Please enter your name.");
-            if (!myName) {
+            /*if (!myName) {
                 setUserName();
             } else {
                 localStorage.setItem("name", myName);
                 changeUserHeading.textContent = `Mozilla is cool, ${myName}`;
-            }
+            }*/
             localStorage.setItem("name", myName);
             changeUserHeading.textContent = `Mozilla is cool, ${myName}`;
         }
 
-        /*if (!localStorage.getItem("name")) {
+        if (!localStorage.getItem("name")) {
             setUserName();
         } else {
             const storedName = localStorage.getItem("name");
             changeUserHeading.textContent = `Mozilla is cool, ${storedName}`;
-        }*/
+        }
+        
         changeUserButton.onclick = () => {
             setUserName();
         };
